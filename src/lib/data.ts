@@ -1,172 +1,328 @@
-import { colors } from "./colors";
+import {colors} from "./colors";
 
-export interface Playlist {
-  id: string;
-  title: string;
-  color: (typeof colors)[keyof typeof colors];
-  cover: string;
-  artists: string[];
-}
-
-export const playlists: Playlist[] = [
-  {
+const songScale = "w_40,h_40,c_scale";
+export const itinerario: Itinerario = {
     id: "1",
-    title: "Electronic Party",
+    title: "Itinerario completo",
     color: colors.teal,
     cover:
-      "https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_1_yci5uf.jpg",
-    artists: ["Avicii", "Alok"],
-  },
-  {
-    id: "2",
-    title: "Trance",
-    color: colors.green,
-    cover:
-      "https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_2_f9ymlx.jpg",
-    artists: ["Tiesto", "Armin Van Buuren"],
-  },
-  {
-    id: "3",
-    title: "Trap Vibes",
-    color: colors.rose,
-    cover:
-      "https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776175/spotify-astro/playlist_3_grshca.jpg",
-    artists: ["Post Malone", "Travis Scott", "21 savage"],
-  },
-  {
-    id: "4",
-    title: "Beatles Classics",
-    color: colors.red,
-    cover:
-      "https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776175/spotify-astro/playlist_4_ap5xnb.jpg",
-    artists: ["The Beatles"],
-  },
-  {
-    id: "5",
-    title: "Electronic Dance",
-    color: colors.pink,
-    cover:
-      "https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776175/spotify-astro/playlist_5_erjyb7.jpg",
-    artists: ["Deadmau5"],
-  },
-  {
-    id: "6",
-    title: "Cow songs",
-    color: colors.gray,
-    cover:
-      "https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776474/spotify-astro/R-15112137-1586815179-1911_fsyl58.jpg",
-    artists: ["Saint Hilda", "Canada Buffalo"],
-  },
+        "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+    artists: [],
+}
+
+interface Dia {
+    id: string;
+    title: string;
+    image: string;
+    cover: string;
+    city: string;
+    color: (typeof colors)[keyof typeof colors];
+}
+
+export const dias: Dia[] = [
+    {
+        id: "1",
+        title: "Salida de Barcelona - Roma y rato en avión",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Barcelona y Roma",
+        color: colors.teal,
+    },
+    {
+        id: "2",
+        title: "Llegada a Japón y primer contacto con Kyoto",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Tokyo y Kyoto",
+        color: colors.teal,
+
+    },
+    {
+        id: "3",
+        title: "Los templos del Este de Kyoto",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Kyoto",
+        color: colors.teal,
+    },
+    {
+        id: "4",
+        title: "El templo dorado y bosque de bambú ",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Kyoto",
+        color: colors.teal,
+    },
+    {
+        id: "5",
+        title: "Inari-Taisha y Nara",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Kyoto y Nara",
+        color: colors.teal,
+    },
+    {
+        id: "6",
+        title: "Visitando y comiendo Kobe",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Kobe",
+        color: colors.teal,
+    },
+    {
+        id: "7",
+        title: "El japon mas diferente",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Osaka",
+        color: colors.teal,
+    },
+    {
+        id: "8",
+        title: "Excursion atomica",
+        image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
+        cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
+        city: "Hiroshima y Miyajima",
+        color: colors.teal,
+    },
 ];
 
+
+export interface Itinerario {
+    id: string;
+    title: string;
+    color: (typeof colors)[keyof typeof colors];
+    cover: string;
+    artists: string[];
+}
+
+export interface Sitio {
+    id: string;
+    title: string;
+    color: (typeof colors)[keyof typeof colors];
+    cover: string;
+    badges: any[];
+}
+
+
+export interface Playlist {
+    id: string;
+    title: string;
+    color: (typeof colors)[keyof typeof colors];
+    cover: string;
+    artists: string[];
+}
+
+export const sitios: Sitio[] = [
+    {
+        id: "1",
+        title: "Tokyo",
+        color: colors.teal,
+        cover:
+            "https://res.cloudinary.com/djklfwvv2/image/upload/v1695162989/japon-2weeks/p6necm70xlarvdujh6cs.png",
+        badges: [
+            {
+                name: 'Templos',
+                color: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+            },
+            {
+                name: 'Restaurantes',
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+            },
+            {
+                name: 'Calles',
+                color: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300'
+            },
+            {
+                name: 'Zonas',
+                color: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+            },
+            {
+                name: 'Monumentos',
+                color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+            }
+        ],
+
+    },
+    {
+        id: "2",
+        title: "Kyoto",
+        color: colors.green,
+        cover:
+            "https://res.cloudinary.com/djklfwvv2/image/upload/v1695163529/japon-2weeks/jj80s0riuhz0a4qwb3am.jpg",
+        badges: [
+            {
+                name: 'Templos',
+                color: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+            },
+            {
+                name: 'Restaurantes',
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+            },
+            {
+                name: 'Calles',
+                color: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300'
+            },
+        ],
+    },
+    {
+        id: "3",
+        title: "Osaka",
+        color: colors.rose,
+        cover:
+            "https://res.cloudinary.com/djklfwvv2/image/upload/v1695163617/japon-2weeks/sqlgpkqibwtypcqcxg7b.jpg",
+        badges: [
+            {
+                name: 'Restaurantes',
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+            },
+            {
+                name: 'Calles',
+                color: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300'
+            },
+        ],
+    },
+    {
+        id: "4",
+        title: "Kobe",
+        color: colors.red,
+        cover:
+            "https://res.cloudinary.com/djklfwvv2/image/upload/v1695163740/japon-2weeks/wliqlfz2rpnvoshstfgh.jpg",
+        badges: [
+            {
+                name: 'Restaurantes',
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+            },
+            {
+                name: 'Zonas',
+                color: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+            },
+        ],
+    },
+    {
+        id: "5",
+        title: "Hiroshima",
+        color: colors.pink,
+        cover:
+            "https://res.cloudinary.com/djklfwvv2/image/upload/v1695163889/japon-2weeks/wqhpklnq9tl51yceufcp.png",
+        badges: [
+            {
+                name: 'Monumentos',
+                color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+            }
+        ],
+    },
+]
+
 export const morePlaylists = [
-  ...playlists.map((item) => ({
-    ...item,
-    id: item.id + "a",
-  })),
+    ...sitios.map((item) => ({
+        ...item,
+        id: item.id + "a",
+    })),
 ];
 
 export const sidebarPlaylists = [
-  ...playlists.map((item) => ({
-    ...item,
-    id: item.id + "_side",
-  })),
+    ...sitios.map((item) => ({
+        ...item,
+        id: item.id + "_side",
+    })),
 ];
 
 export const allPlaylists = [
-  ...playlists,
-  ...morePlaylists,
-  ...sidebarPlaylists,
+    ...sitios,
+    ...morePlaylists,
+    ...sidebarPlaylists,
 ];
 
 interface Song {
-  id: string;
-  title: string;
-  image: string;
-  artists: string[];
-  album: string;
-  duration: string;
+    id: string;
+    title: string;
+    image: string;
+    artists: string[];
+    album: string;
+    duration: string;
 }
-const songScale = "w_40,h_40,c_scale";
+
 export const songs: Song[] = [
-  {
-    id: "1",
-    title: "The Nights",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_1_qitfwl.jpg`,
-    artists: ["Avicii"],
-    album: "The Days / Nights",
-    duration: "2:56",
-  },
-  {
-    id: "2",
-    title: "Saint-Tropez",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_2_cijs8v.jpg`,
-    artists: ["Post Malone"],
-    album: "Hollywood's Bleeding",
-    duration: "2:23",
-  },
-  {
-    id: "3",
-    title: "SICKO MODE",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_3_td9ncs.jpg`,
-    artists: ["Travis Scott", "Drake"],
-    album: "ASTROWORLD",
-    duration: "5:13",
-  },
-  {
-    id: "4",
-    title: "Blinding Lights",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_4_lwumgu.png`,
-    artists: ["The Weeknd"],
-    album: "After Hours",
-    duration: "3:22",
-  },
-  {
-    id: "5",
-    title: "Shape of You",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_5_rd5xqa.jpg`,
-    artists: ["Ed Sheeran"],
-    album: "÷ (Divide)",
-    duration: "3:53",
-  },
-  {
-    id: "6",
-    title: "Uptown Funk",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_6_f1lt7y.jpg`,
-    artists: ["Mark Ronson", "Bruno Mars"],
-    album: "Uptown Special",
-    duration: "4:30",
-  },
-  {
-    id: "7",
-    title: "Bad Guy",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_7_m7f0mh.jpg`,
-    artists: ["Billie Eilish"],
-    album: "When We All Fall Asleep, Where Do We Go?",
-    duration: "3:14",
-  },
-  {
-    id: "8",
-    title: "Yesterday",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_8_hwxisr.jpg`,
-    artists: ["The Beatles"],
-    album: "Today & Tomorrow",
-    duration: "4:38",
-  },
-  {
-    id: "9",
-    title: "Havana",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_9_szemzp.jpg`,
-    artists: ["Camila Cabello", "Young Thug"],
-    album: "Camila",
-    duration: "3:37",
-  },
-  {
-    id: "10",
-    title: "Radioactive",
-    image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_10_sz0cib.jpg`,
-    artists: ["Imagine Dragons"],
-    album: "Night Visions",
-    duration: "3:07",
-  },
+    {
+        id: "1",
+        title: "The Nights",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_1_qitfwl.jpg`,
+        artists: ["Avicii"],
+        album: "The Days / Nights",
+        duration: "2:56",
+    },
+    {
+        id: "2",
+        title: "Saint-Tropez",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_2_cijs8v.jpg`,
+        artists: ["Post Malone"],
+        album: "Hollywood's Bleeding",
+        duration: "2:23",
+    },
+    {
+        id: "3",
+        title: "SICKO MODE",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_3_td9ncs.jpg`,
+        artists: ["Travis Scott", "Drake"],
+        album: "ASTROWORLD",
+        duration: "5:13",
+    },
+    {
+        id: "4",
+        title: "Blinding Lights",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_4_lwumgu.png`,
+        artists: ["The Weeknd"],
+        album: "After Hours",
+        duration: "3:22",
+    },
+    {
+        id: "5",
+        title: "Shape of You",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_5_rd5xqa.jpg`,
+        artists: ["Ed Sheeran"],
+        album: "÷ (Divide)",
+        duration: "3:53",
+    },
+    {
+        id: "6",
+        title: "Uptown Funk",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_6_f1lt7y.jpg`,
+        artists: ["Mark Ronson", "Bruno Mars"],
+        album: "Uptown Special",
+        duration: "4:30",
+    },
+    {
+        id: "7",
+        title: "Bad Guy",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_7_m7f0mh.jpg`,
+        artists: ["Billie Eilish"],
+        album: "When We All Fall Asleep, Where Do We Go?",
+        duration: "3:14",
+    },
+    {
+        id: "8",
+        title: "Yesterday",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776175/spotify-astro/song_8_hwxisr.jpg`,
+        artists: ["The Beatles"],
+        album: "Today & Tomorrow",
+        duration: "4:38",
+    },
+    {
+        id: "9",
+        title: "Havana",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_9_szemzp.jpg`,
+        artists: ["Camila Cabello", "Young Thug"],
+        album: "Camila",
+        duration: "3:37",
+    },
+    {
+        id: "10",
+        title: "Radioactive",
+        image: `https://res.cloudinary.com/dp3ppkxo5/image/upload/${songScale}/v1693776176/spotify-astro/song_10_sz0cib.jpg`,
+        artists: ["Imagine Dragons"],
+        album: "Night Visions",
+        duration: "3:07",
+    },
 ];

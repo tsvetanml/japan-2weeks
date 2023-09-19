@@ -1,45 +1,46 @@
 ---
-import type { Playlist } from "../lib/data";
+import type {Sitio} from "../lib/data";
 import PlayButton from "./PlayButton.astro";
-import PureInlineArtists from "./PureInlineArtists.astro";
 interface Props {
-  playlist: Playlist;
+    sitio: Sitio;
 }
 
-const { playlist } = Astro.props;
+const {sitio} = Astro.props;
 ---
 
 <a
-  href={`/playlist/${playlist.id}`}
-  class="playlist-card p-4 flex-col items-center group relative transition-all duration-300 overflow-hidden gap-5 rounded-md shadow-lg hover:shadow-xl outline-none bg-zinc-500/5 hover:bg-zinc-500/20 focus:bg-zinc-500/20"
-  data-color={playlist.color.dark}
-  transition:name=`playlist ${playlist.id} box`
+        href={`/playlist/${sitio.id}`}
+        class="playlist-card p-4 flex-col items-center group relative transition-all duration-300 overflow-hidden gap-5 rounded-md shadow-lg hover:shadow-xl outline-none bg-zinc-500/5 hover:bg-zinc-500/20 focus:bg-zinc-500/20"
+        data-color={sitio.color.dark}
+        transition:name=`playlist ${sitio.id} box`
 >
-  <div class="w-40">
-    <div class="relative group mx-auto h-40 w-full flex-none shadow-lg">
-      <img
-        src={playlist.cover}
-        alt={playlist.title}
-        class="object-cover h-full w-full rounded-md shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
-        transition:name=`playlist ${playlist.id} image`
-      />
-      <div
-        class="absolute right-2 bottom-2 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all"
-        transition:name=`playlist ${playlist.id} play`
-      >
-        <PlayButton />
-      </div>
+    <div class="w-40">
+        <div class="relative group mx-auto h-40 w-full flex-none shadow-lg">
+            <img
+                    src={sitio.cover}
+                    alt={sitio.title}
+                    class="object-cover h-full w-full rounded-md shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
+                    transition:name=`playlist ${sitio.id} image`
+            />
+            <div
+                    class="absolute right-2 bottom-2 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all"
+                    transition:name=`playlist ${sitio.id} play`
+            >
+                <PlayButton/>
+            </div>
+        </div>
+        <div class="pt-2">
+            <div
+                    class="font-bold block truncate"
+                    transition:name=`playlist ${sitio.id} title`
+            >
+                {sitio.title}
+            </div>
+            <div class="pr-2 overflow-auto">
+                {sitio.badges.map(badge => (
+                        <span class=`text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full ${badge.color}`>{badge.name}</span>
+                ))}
+            </div>
+        </div>
     </div>
-    <div class="pt-2">
-      <div
-        class="font-bold block truncate"
-        transition:name=`playlist ${playlist.id} title`
-      >
-        {playlist.title}
-      </div>
-      <div class="text-gray-400 text-xs">
-        <PureInlineArtists artists={playlist.artists} />
-      </div>
-    </div>
-  </div>
 </a>
