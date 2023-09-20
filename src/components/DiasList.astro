@@ -7,8 +7,8 @@ import {dias} from "../lib/data";
     {
         dias.map((song, index) => (
                 <tr class="group hover:bg-gray-500/20 cursor-pointer">
-                    <td class="whitespace-nowrap px-4 py-2 text-gray-300">Dia {index + 1}</td>
-                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+                    <td class="whitespace-nowrap px-2 md:px-4 py-2 text-gray-300">Dia {index + 1}</td>
+                    <td class="whitespace-nowrap px-2 md:px-4 py-2 flex gap-3 items-center">
                         <div class="h-10 w-10">
                             <img
                                     src={song.image}
@@ -21,7 +21,7 @@ import {dias} from "../lib/data";
                                     href=`/itinerario/days/day${index + 1}`
                                     class="text-gray-300 group-hover:text-white hover:underline text-sm"
                             >
-                                {song.title}
+                              {song.title}
                             </a>
 
                         </div>

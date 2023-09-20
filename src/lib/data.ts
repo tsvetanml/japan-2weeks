@@ -22,7 +22,7 @@ interface Dia {
 export const dias: Dia[] = [
     {
         id: "1",
-        title: "Salida de Barcelona - Roma y rato en avión",
+        title: "Salida de capitales",
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
 
         cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
@@ -31,7 +31,7 @@ export const dias: Dia[] = [
     },
     {
         id: "2",
-        title: "Llegada a Japón y primer contacto con Kyoto",
+        title: "Primer contacto Japones",
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
         cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
         city: "Tokyo y Kyoto",
@@ -40,7 +40,7 @@ export const dias: Dia[] = [
     },
     {
         id: "3",
-        title: "Los templos del Este de Kyoto",
+        title: "El Este de Kyoto",
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg`,
         cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
         city: "Kyoto",
