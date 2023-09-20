@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  title = "Home",
-  image = "https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_2_f9ymlx.jpg",
+  title = "Japón en 2 semanas",
+  image = "https://res.cloudinary.com/djklfwvv2/image/upload/v1695164906/japon-2weeks/fxyo2y09qy4w6mofjfjy.jpg",
 } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
 import "./layout.css";
@@ -24,7 +24,7 @@ import SideMenu from "../components/Side/SideMenu.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Spotify Astro</title>
+    <title>{title}</title>
     <meta property="og:image" content={image} />
     <meta name="twitter:image" content={image} />
     <ViewTransitions fallback="none" />
@@ -34,7 +34,7 @@ import SideMenu from "../components/Side/SideMenu.astro";
       <div class="w-[350px] flex-col hidden lg:flex overflow-y-auto">
         <SideMenu />
       </div>
-      <div class="rounded-lg bg-zinc-900 flex-1 mx-auto overflow-y-auto">
+      <div class="rounded-lg bg-zinc-900 flex-1 mx-auto ">
         <slot />
       </div>
     </div>

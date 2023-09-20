@@ -19,14 +19,15 @@ import {dias} from "../lib/data";
                         <div class="leading-none">
                             <a
                                     href=`/itinerario/days/day${index + 1}`
-                                    class="text-gray-300 group-hover:text-white hover:underline text-sm"
+                                    class="text-gray-300 truncate group-hover:text-white hover:underline text-sm"
                             >
                               {song.title}
                             </a>
-
+                           <a class="md:hidden block">{song.city}</a>
                         </div>
                     </td>
-                    <td class="whitespace-nowrap px-4 py-2">
+                    <!--hidden md:inl-->
+                    <td class="hidden md:table-cell whitespace-nowrap px-4 py-2">
                         <a
                                 href="#"
                                 class="text-gray-300 group-hover:text-white hover:underline text-sm"
