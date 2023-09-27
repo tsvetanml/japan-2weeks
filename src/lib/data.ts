@@ -125,7 +125,7 @@ export const dias: Dia[] = [
         city: "Tokyo",
         color: colors.teal,
     },
-    {
+    { //añadir roppongi y odaiba
         id: "14",
         title: "Cervezas y actividad nocturna",// tranquilos y festival padre
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695770479/japon-2weeks/ncng7gdji4egoqzcl1w3.jpg`,

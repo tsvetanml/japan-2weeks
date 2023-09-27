@@ -1,0 +1,86 @@
+---
+import {dias} from "../../../lib/data";
+import Layout from "../../../layouts/Layout.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+import HeaderItinerario from "../../../components/HeaderItinerario.astro";
+const day = dias[9]
+---
+<Layout image={day.cover} title={day.title || "404"}>
+    <div
+            class="relative bg-zinc-900 min-h-full flex flex-col overflow-x-hidden rounded-lg"
+            transition:name=`playlist ${day.id} box`
+    >
+        <HeaderItinerario/>
+        <div class="flex flex-col items-center md:flex-row md:items-stretch gap-8 px-6">
+            <div class="h-52 w-52 flex-none">
+                <img
+                        src={day.cover}
+                        alt={day.title}
+                        class="object-cover h-full w-full shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
+                        transition:name=`playlist ${day.id} image`
+                />
+            </div>
+            <div class="flex flex-col justify-center">
+                <div>
+                    <h1 class="title-clamp font-bold block">
+                        {day.title}
+                        <span transition:name=`playlist ${day.id} title`></span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="bg-zinc-900/30 mt-6 flex-1 p-6 blur-100 md:flex">
+            <div class="px-2 pt-4 md:w-1/3">
+                <p class="text-lg mt-1">
+                    Primer dia entero de Tokio, disfrutaremos del Oeste, donde visitaremos los distritos de Shibuya y Shinjuku.
+                </p>
+                <p class="text-lg mt-1">
+                    Shibuya es el distrito de Tokio famoso por su cruce peatonal en forma de diamante y su vibrante escena de compras y entretenimiento, mientras que Shinjuku es un bullicioso distrito comercial y de negocios conocido por sus rascacielos, vida nocturna y el tranquilo Parque Shinjuku Gyoen.
+                </p>
+
+            </div>
+            <div class="px-2 pt-4 md:w-1/3">
+                <p class="text-lg font-bold mt-1">Lo genial de Tokyo es que no hay madrugar mucho, ya que es una ciduad 24h</p>
+                <p class="text-lg font-bold mt-1">Este seria un itinerario de lo que se podria seguir:</p>
+                <p class="text-lg mt-1">· Estacion de Shibuya
+                </p>
+                <p class="text-lg mt-1">· El cruze de Shibuya
+                <p class="text-lg mt-1">· Estatua de Hachiko
+                </p>
+                <p class="text-lg mt-1">· Perdernos por las calles de Shibuya
+                </p>
+                <p class="text-lg mt-1">· Ver desde fuera el gimnasio nacional Yoyogi
+                </p>
+                <p class="text-lg mt-1">· Pasar por la famosa calle de gacha Takeshita Street, donde es muy famoso comerse una crepe.
+                </p>
+                <p class="text-lg mt-1">· Visitar el santuario mas famoso de Tokyo, Santuario Meiji.
+                </p>
+                <p class="text-lg mt-1">· Continuaremos por Shinjuku, donde primero visitaremos el antiguo mercado negro Omoide Yococho
+                </p>
+                <p class="text-lg mt-1">· Acabaremos visitando la zona con mas vida nocturna de la ciudad, Golden Gai y Kabukicho
+                </p>
+            </div>
+        </div>
+        <div
+                class="absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+                style=`--context-color:${day.color.accent}`
+        >
+            <img
+                    src={day.cover}
+                    alt={day.title}
+                    class="el-to-fade transition-all duration-500 z-[-1] absolute inset-0 mix-blend-overlay opacity-20 scale-90 w-full h-full object-cover blur-md"
+            />
+            <div
+                    class="absolute inset-0 bg-gradient-to-t via-transparent from-zinc-900"
+            >
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .title-clamp {
+        font-size: clamp(16px, 3vw, 70px);
+        line-height: 1;
+    }
+</style>
