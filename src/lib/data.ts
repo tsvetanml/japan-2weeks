@@ -119,15 +119,15 @@ export const dias: Dia[] = [
     },
     {
         id: "13",
-        title: "Excursion playera",//nakamura y repaso
+        title: "Excursion playera",
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695768998/japon-2weeks/wywduk3sjufrnqupykyt.jpg`,
         cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695768998/japon-2weeks/wywduk3sjufrnqupykyt.jpg",
         city: "Tokyo",
         color: colors.teal,
     },
-    { //añadir roppongi y odaiba
+    {
         id: "14",
-        title: "Cervezas y actividad nocturna",// tranquilos y festival padre
+        title: "Isla artificial",
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695770479/japon-2weeks/ncng7gdji4egoqzcl1w3.jpg`,
         cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695770479/japon-2weeks/ncng7gdji4egoqzcl1w3.jpg",
         city: "Tokyo",
@@ -135,7 +135,7 @@ export const dias: Dia[] = [
     },
     {
         id: "15",
-        title: "Compras y visitas de ultimo momento",//ultimos repasos
+        title: "Compras y visitas de ultimo momento",
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695770480/japon-2weeks/v1k5bh9xlysjv8fl7gig.jpg`,
         cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695770480/japon-2weeks/v1k5bh9xlysjv8fl7gig.jpg",
         city: "Tokyo",
@@ -143,7 +143,7 @@ export const dias: Dia[] = [
     },
     {
         id: "16",
-        title: "Sayonara",//despedida
+        title: "Sayonara",
         image: `https://res.cloudinary.com/djklfwvv2/image/upload/${songScale}/v1695768998/japon-2weeks/vtcjon8meam6mnincg5b.png`,
         cover: "https://res.cloudinary.com/djklfwvv2/image/upload/v1695768998/japon-2weeks/vtcjon8meam6mnincg5b.png",
         city: "Tokyo",

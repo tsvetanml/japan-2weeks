@@ -1,0 +1,72 @@
+---
+import {dias} from "../../../lib/data";
+import Layout from "../../../layouts/Layout.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+import HeaderItinerario from "../../../components/HeaderItinerario.astro";
+const day = dias[13]
+---
+<Layout image={day.cover} title={day.title || "404"}>
+    <div
+            class="relative bg-zinc-900 min-h-full flex flex-col overflow-x-hidden rounded-lg"
+            transition:name=`playlist ${day.id} box`
+    >
+        <HeaderItinerario/>
+        <div class="flex flex-col items-center md:flex-row md:items-stretch gap-8 px-6">
+            <div class="h-52 w-52 flex-none">
+                <img
+                        src={day.cover}
+                        alt={day.title}
+                        class="object-cover h-full w-full shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
+                        transition:name=`playlist ${day.id} image`
+                />
+            </div>
+            <div class="flex flex-col justify-center">
+                <div>
+                    <h1 class="title-clamp font-bold block">
+                        {day.title}
+                        <span transition:name=`playlist ${day.id} title`></span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="bg-zinc-900/30 mt-6 flex-1 p-6 blur-100 md:flex">
+            <div class="px-2 pt-4 md:w-1/3">
+                <p class="text-lg mt-1">
+                    Una muy buena visita para este dia es la isla artificial de Odaiba, situada en al bahia de Tokyo.
+                </p>
+                <p>Aqui visitaremos la estatua de la libertad, un gundam gigante y cojeremos un tren sin conductor.</p>
+            </div>
+            <div class="px-2 pt-4 md:w-1/3">
+                <p class="text-lg font-bold mt-1">· Línea Yurikamome, una línea sin conductor</p>
+                <p class="text-lg font-bold mt-1">· El puente Rainbow Bridge es uno de los atractivos de Odaiba, así que
+                    la principal manera de llegar a esta isla artificial de la bahía de Tokio.</p>
+                <p class="text-lg font-bold mt-1">· Estatua de la libertad, una replica de la estatua de la liberad.</p>
+                <p class="text-lg font-bold mt-1">· Desde 2017 hay un nuevo Gundam en Odaiba: un Gundam Unicorn (se
+                    mueve)</p>
+                <p class="text-lg font-bold mt-1">· Por la tarde tendremos hueco para volver a ir a algun sitio que nos
+                    haya gustado.</p>
+            </div>
+        </div>
+        <div
+                class="absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+                style=`--context-color:${day.color.accent}`
+        >
+            <img
+                    src={day.cover}
+                    alt={day.title}
+                    class="el-to-fade transition-all duration-500 z-[-1] absolute inset-0 mix-blend-overlay opacity-20 scale-90 w-full h-full object-cover blur-md"
+            />
+            <div
+                    class="absolute inset-0 bg-gradient-to-t via-transparent from-zinc-900"
+            >
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .title-clamp {
+        font-size: clamp(16px, 3vw, 70px);
+        line-height: 1;
+    }
+</style>
