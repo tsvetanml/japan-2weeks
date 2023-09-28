@@ -1,9 +1,5 @@
 ---
 const {id} = Astro.params;
-import DotsButton from "../../components/DotsButton.astro";
-import InlineArtists from "../../components/InlineArtists.astro";
-import LikeButton from "../../components/LikeButton.astro";
-import MusicsTable from "../../components/MusicsTable.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import PlayButton from "../../components/PlayButton.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -45,30 +41,9 @@ const playlist = allPlaylists.find((playlist) => playlist.id === id);
                         <span transition:name=`playlist ${playlist?.id} title`></span>
                     </h1>
                 </div>
-                <!--<div class="flex-1 flex items-end">-->
-                <!--  <div class="text-sm">-->
-                <!--    <InlineArtists artists={playlist?.artists || []} />-->
-                <!--    <div class="mt-1">-->
-                <!--      <span class="font-semibold">58 likes</span>, 83 musics, <span-->
-                <!--        class="text-gray-300">about 3h 15min</span-->
-                <!--      >-->
-                <!--    </div>-->
-                <!--  </div>-->
-                <!--</div>-->
             </div>
         </div>
 
-        <!--<div class="bg-zinc-900/30 mt-6 flex-1 p-6 blur-100">-->
-        <!--    <div class="flex gap-1 items-center">-->
-        <!--        <PlayButton size="lg"/>-->
-        <!--        <div class="ml-4" transition:name=`playlist ${playlist?.id} play`></div>-->
-        <!--        <LikeButton/>-->
-        <!--        <DotsButton/>-->
-        <!--    </div>-->
-        <!--    <div class="px-6 pt-4">-->
-        <!--        <MusicsTable/>-->
-        <!--    </div>-->
-        <!--</div>-->
         <div
                 class="absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
                 style=`--context-color:${playlist?.color.accent}`
