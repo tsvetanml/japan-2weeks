@@ -190,27 +190,137 @@ export const sitios: Sitio[] = [
                 color: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
                 items: [
                     {
-                        title: '',
-                        href: '',
-                        description: ''
-                    }
+                        title: 'Santuario Meiji',
+                        href: 'https://maps.app.goo.gl/iG7Hnqmu24nxUonq8',
+                        description: 'Santuario mas famosos de Tokyo'
+                    }, {
+                        title: 'Templo Sensoji',
+                        href: 'https://maps.app.goo.gl/n6xxwrmgbmnUh1Wv7',
+                        description: 'El mas antiguo de Tokyo'
+                    }, {
+                        title: 'Palacio imperial de Tokyo',
+                        href: 'https://maps.app.goo.gl/C4iiRtjYKMNr8oWTA',
+                        description: 'Actual residencia del emperador'
+                    }, {
+                        title: 'Zojoji',
+                        href: 'https://maps.app.goo.gl/2RzBJEfUztxZ3W9ZA',
+                        description: 'Templo debajo de la torre de Tokyo'
+                    }, {
+                        title: 'Hie Shrine',
+                        href: 'https://maps.app.goo.gl/XVtJdo43cKzvTRea6',
+                        description: 'Santuario con toriis'
+                    },
                 ]
             },
             {
                 name: 'Restaurantes',
-                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+                items: []
             },
             {
                 name: 'Calles',
-                color: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300'
+                color: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300',
+                items: [
+                    {
+                        title: 'Takeshita Street',
+                        href: 'https://maps.app.goo.gl/Uj6qnCdWRVNtu6Mm9',
+                        description: 'Calle kawai con gachapons'
+                    }, {
+                        title: 'Omoide Yococho',
+                        href: 'https://maps.app.goo.gl/DHfdYUqy2TwYYDNp7',
+                        description: 'Antiguo mercado negro'
+                    }, {
+                        title: 'Golden Gai',
+                        href: 'https://maps.app.goo.gl/fH1Pi5pbqmYFyeQi6',
+                        description: 'Calles nocturnas estrechas de bares'
+                    }, {
+                        title: 'Kabuchico',
+                        href: 'https://maps.app.goo.gl/tmvFxosdqhFr71jv8',
+                        description: 'Calles rojas nocturnas'
+                    }, {
+                        title: 'Ameyoko',
+                        href: 'https://maps.app.goo.gl/BMFSnRwgFWCkoUSP9',
+                        description: 'Calle donde se forma un gran mercado'
+                    }, {
+                        title: 'Puente Rainbow Bridge',
+                        href: 'https://maps.app.goo.gl/D1LsatUDXq9ZW5E78',
+                        description: 'Puente por donde pasa el tren sin conductor'
+                    },
+                ]
             },
             {
                 name: 'Zonas',
-                color: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+                color: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+                items: [
+                    {
+                        title: 'Shinjuku',
+                        href: 'https://maps.app.goo.gl/uXujGmdLXiDDUWCP7',
+                        description: 'Conjunto de templos famoso por su enorme mirador'
+                    }, {
+                        title: 'Akihabara',
+                        href: 'https://maps.app.goo.gl/RvMFHwTAevUgHWdw8',
+                        description: 'El epicentro de la cultura otaku y la electrónica en Tokio'
+                    }, {
+                        title: 'Shibuya',
+                        href: 'https://maps.app.goo.gl/VsQoDAfVFNNiTLmz8',
+                        description: 'Distrito de Tokio famoso por su cruce peatonal en forma de diamante'
+                    }, {
+                        title: 'Asakusa',
+                        href: 'https://maps.app.goo.gl/uXNcofE8815vxL587',
+                        description: 'Barrio mas tradicional de Tokyo'
+                    }, {
+                        title: 'Ginza',
+                        href: 'https://maps.app.goo.gl/dVsuDpSVMLtb9MSg8',
+                        description: 'Famoso barrio de tiendas carisimas'
+                    }, {
+                        title: 'Odaiba',
+                        href: 'https://maps.app.goo.gl/dVsuDpSVMLtb9MSg8',
+                        description: 'Isla artificial de Tokyo'
+                    }, {
+                        title: 'Roppongi',
+                        href: 'https://maps.app.goo.gl/n9GHZyKEBgrMw7ZX9',
+                        description: 'Zona comercial y fiestera de extrangeros'
+                    }
+                ]
             },
             {
                 name: 'Monumentos',
-                color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+                color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+                items: [
+                    {
+                        title: 'Gobierno metropolitano de Tokyo',
+                        href: 'https://maps.app.goo.gl/J4nS7dLVffmvL92r5',
+                        description: 'Edificio con mirador gratuito'
+                    }, {
+                        title: 'Cruze de Shibuya',
+                        href: 'https://maps.app.goo.gl/ATKjaqDRJDkX7LNj6',
+                        description: 'Famoso cruce de Shibuya'
+                    }, {
+                        title: 'Estatua de Hachiko',
+                        href: 'https://maps.app.goo.gl/bZZCA3EXsVqu73pi6',
+                        description: 'Estatua del famoso perro'
+                    }, {
+                        title: 'Gimnasio nacional de Yoyogi',
+                        href: 'https://maps.app.goo.gl/qFmZGREt6r6ESsdH7',
+                        description: 'Gimnasio enorme dentro de la ciudad'
+                    }, {
+                        title: 'Torre de Tokyo',
+                        href: 'https://maps.app.goo.gl/hE611hEK88xXQgKR8',
+                        description: 'Gran torre en medio de la ciudad'
+                    }, {
+                        title: 'Estatua de la liberatad',
+                        href: 'https://maps.app.goo.gl/x9dTHH99jecxePtx9',
+                        description: 'Imitacion de la estatua de la libertad'
+                    }, {
+                        title: 'Gundam Unicorn',
+                        href: 'https://maps.app.goo.gl/EA6Hc8d15FpHz9zM9',
+                        description: 'Gundam gigante'
+                    }, {
+                        title: 'Tokyo Sky Tree',
+                        href: 'https://maps.app.goo.gl/DexB748omeKhmgwh8',
+                        description: 'Segundo edificio mas alto del mundo'
+                    },
+                ]
             }
         ],
 
@@ -280,7 +390,8 @@ export const sitios: Sitio[] = [
             },
             {
                 name: 'Restaurantes',
-                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+                items: []
             },
             {
                 name: 'Calles',
@@ -329,7 +440,8 @@ export const sitios: Sitio[] = [
         badges: [
             {
                 name: 'Restaurantes',
-                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+                items: []
             },
             {
                 name: 'Calles',
@@ -358,7 +470,8 @@ export const sitios: Sitio[] = [
         badges: [
             {
                 name: 'Restaurantes',
-                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+                items: []
             },
             {
                 name: 'Zonas',
@@ -408,7 +521,8 @@ export const sitios: Sitio[] = [
             },
             {
                 name: 'Restaurantes',
-                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+                color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+                items: []
             },
         ],
     },

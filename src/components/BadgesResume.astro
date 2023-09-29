@@ -1,0 +1,16 @@
+---
+interface Props {
+    badge: any;
+}
+const {badge} = Astro.props;
+---
+
+<div class="px-2 pt-4 md:w-1/2">
+    <span class=`text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full ${badge.color}`>{badge.name}</span>
+    {badge.items.map((item) =>
+            <p class="text-lg mt-1"><a href={item.href}
+                                       class="underline decoration-sky-500 font-bold">{item.title}</a>, {item.description}.
+            </p>
+    )}
+</div>
+
