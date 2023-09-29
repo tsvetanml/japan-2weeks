@@ -215,7 +215,13 @@ export const sitios: Sitio[] = [
             {
                 name: 'Restaurantes',
                 color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-                items: []
+                items: [
+                    {
+                        title: 'Guia mas mapa de donde comer en Tokio',
+                        href: 'https://comiviajeros.com/donde-comer-en-tokio/',
+                    },
+
+                ]
             },
             {
                 name: 'Calles',
@@ -391,7 +397,47 @@ export const sitios: Sitio[] = [
             {
                 name: 'Restaurantes',
                 color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-                items: []
+                items: [
+                    {
+                        title: 'Sushitetsu',
+                        href: 'https://maps.app.goo.gl/M7wUA7TTrivr1RkD6',
+                        description: 'Sushi en Pontocho'
+                    },
+                    {
+                        title: 'Mushashi Sushi',
+                        href: 'https://maps.app.goo.gl/FSZz8HujW46PTWbi9',
+                        description: 'Sushi en cinta cerca de Pontocho'
+                    },
+                    {
+                        title: 'Chao Chao Sanjo Kiyamachi',
+                        href: 'https://maps.app.goo.gl/ZdAhk7LyszNU15NJ9',
+                        description: 'Sitio de gyozas en Pontocho muy pequeño'
+                    },
+                    {
+                        title: 'Ramen Sen-no-Kaze Kyoto',
+                        href: 'https://maps.app.goo.gl/rSiTg43Tt3Vhw4cV6',
+                        description: 'De los mejores ramen en Kyoto (ir con tiempo)'
+                    },
+                    {
+                        title: 'Katsukura Tonkatsu Sanjo',
+                        href: 'https://maps.app.goo.gl/feaoQtL4zUFfkpZM7',
+                        description: 'Sitio bueno de tonkatsu'
+                    },
+                    {
+                        title: 'Kikyo Sushi',
+                        href: 'https://maps.app.goo.gl/3UUzNyGT8CwUTTf6A',
+                        description: 'Sushi algo caro cerca de casa'
+                    },
+                    {
+                        title: 'Kikyo Sushi',
+                        href: 'https://maps.app.goo.gl/3UUzNyGT8CwUTTf6A',
+                        description: 'Sushi algo caro cerca de casa'
+                    },
+                    {
+                        title: 'Mas sitios donde comer en Kyoto, con mapa incluido',
+                        href: 'https://comiviajeros.com/donde-comer-en-kioto/',
+                    },
+                ]
             },
             {
                 name: 'Calles',
@@ -441,7 +487,12 @@ export const sitios: Sitio[] = [
             {
                 name: 'Restaurantes',
                 color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-                items: []
+                items: [
+                    {
+                        title: 'Guia mas mapa de donde comer en Osaka',
+                        href: 'https://comiviajeros.com/donde-comer-en-osaka/',
+                    },
+                ]
             },
             {
                 name: 'Calles',
@@ -471,7 +522,13 @@ export const sitios: Sitio[] = [
             {
                 name: 'Restaurantes',
                 color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-                items: []
+                items: [
+                    {
+                        title: 'Guia donde comer en Kobe',
+                        href: 'https://www.insidekyoto.com/places-to-eat-in-kobe',
+                        description: 'Calle paralela a la anterior mas grande'
+                    },
+                ]
             },
             {
                 name: 'Zonas',
@@ -522,7 +579,12 @@ export const sitios: Sitio[] = [
             {
                 name: 'Restaurantes',
                 color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-                items: []
+                items: [
+                    {
+                        title: 'Guia donde comer en Hiroshima',
+                        href: ' https://www.insidekyoto.com/best-places-to-eat-in-hiroshima-and-miyajima',
+                    }
+                ]
             },
         ],
     },
